@@ -4,7 +4,7 @@ Summary(pl):	Niezale¿ne od bazy danych API dla ocamla
 Name:		ocaml-dbi
 Version:	0.9.10
 Release:	3
-License:	GPL
+License:	LGPL + OCaml linking exception
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/modcaml/%{_vendor_name}-%{version}.tar.gz
 # Source0-md5:	d23495a0a6dee8c0d636d29df844e981
