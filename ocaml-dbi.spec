@@ -9,8 +9,8 @@ Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/modcaml/%{_vendor_name}-%{version}.tar.gz
 # Source0-md5:	d23495a0a6dee8c0d636d29df844e981
 BuildRequires:	ocaml >= 3.04-7
-BuildRequires:  ocaml-postgres-devel
-BuildRequires:  ocaml-mysql-devel
+BuildRequires:	ocaml-postgres-devel
+BuildRequires:	ocaml-mysql-devel
 %requires_eq	ocaml-runtime
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
