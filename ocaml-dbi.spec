@@ -1,13 +1,13 @@
-%define         _vendor_name ocamldbi
-Summary:	database independent layer
-Summary(pl):	Niezalezne od bazydanych api dla ocamla.
+%define		_vendor_name	ocamldbi
+Summary:	Database independent layer
+Summary(pl):	Niezalezne od bazy danych API dla ocamla
 Name:		ocaml-dbi
 Version:	0.9.10
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/modcaml/%{_vendor_name}-%{version}.tar.gz
-#Source0-md5:   d23495a0a6dee8c0d636d29df844e981
+# Source0-md5:	d23495a0a6dee8c0d636d29df844e981
 BuildRequires:	ocaml >= 3.04-7
 %requires_eq	ocaml-runtime
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,7 +21,7 @@ Perl DBD (database drivers) if you have Perl4Caml installed.
 
 %package devel
 Summary:	TEMPLATE binding for OCaml - development part
-Summary(pl):	Wi±zania TEMPLATE dla OCamla - cze¶æ programistyczna
+Summary(pl):	Wi±zania TEMPLATE dla OCamla - czê¶æ programistyczna
 Group:		Development/Libraries
 %requires_eq	ocaml
 
