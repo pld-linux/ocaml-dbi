@@ -1,6 +1,6 @@
 %define		_vendor_name	ocamldbi
 Summary:	Database independent layer
-Summary(pl):	Niezalezne od bazy danych API dla ocamla
+Summary(pl):	Niezale¿ne od bazy danych API dla ocamla
 Name:		ocaml-dbi
 Version:	0.9.10
 Release:	1
@@ -19,31 +19,48 @@ patterned upon Perl DBI.
 Currently there are drivers for PostgreSQL and MySQL, and you can use
 Perl DBD (database drivers) if you have Perl4Caml installed.
 
+%description -l pl
+ocamldbi to niezale¿na od bazy danych warstwa dla Objective CAML-a
+(OCamla) wzorowana na perlowym DBI.
+
+Aktualnie dostêpne s± sterowniki dla PostgreSQL-a i MySQL-a oraz mo¿na
+u¿ywaæ perlowych sterowników DBD, je¶li zainstalowany jest Perl4Caml.
+
 %package devel
 Summary:	Database independent layer - development part
-Summary(pl):	Niezalezne od bazy danych API dla ocamla - czê¶æ programistyczna
+Summary(pl):	Niezale¿ne od bazy danych API dla ocamla - czê¶æ programistyczna
 Group:		Development/Libraries
 %requires_eq	ocaml
 
 %description devel
 ocamldbi is a database independent layer for Objective CAML (OCaml)
-patterned upon Perl DBI.
+patterned upon Perl DBI. Currently there are drivers for PostgreSQL
+and MySQL, and you can use Perl DBD (database drivers) if you have
+Perl4Caml installed.
 
-Currently there are drivers for PostgreSQL and MySQL, and you can use
-Perl DBD (database drivers) if you have Perl4Caml installed. This
-package contains files needed to develop OCaml programs using this
-library.
+This package contains files needed to develop OCaml programs using
+this library.
+
+%description devel -l pl
+ocamldbi to niezale¿na od bazy danych warstwa dla Objective CAML-a
+(OCamla) wzorowana na perlowym DBI. Aktualnie dostêpne s± sterowniki
+dla PostgreSQL-a i MySQL-a oraz mo¿na u¿ywaæ perlowych sterowników
+DBD, je¶li zainstalowany jest Perl4Caml.
+
+Ten pakiet zawiera pliki potrzebne do tworzenia programów w OCamlu z
+u¿yciem tej biblioteki.
 
 %prep
 %setup -q -n %{_vendor_name}-%{version}
 
 %build
-%{__make} CC="%{__cc} %{rpmcflags} -fPIC" all opt
+%{__make} all opt \
+	CC="%{__cc} %{rpmcflags} -fPIC" 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_libdir}/ocaml/dbi
+
 install *.cm[ixa]* *.a $RPM_BUILD_ROOT%{_libdir}/ocaml/dbi
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
