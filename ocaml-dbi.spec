@@ -20,8 +20,8 @@ Currently there are drivers for PostgreSQL and MySQL, and you can use
 Perl DBD (database drivers) if you have Perl4Caml installed.
 
 %package devel
-Summary:	TEMPLATE binding for OCaml - development part
-Summary(pl):	Wi±zania TEMPLATE dla OCamla - czê¶æ programistyczna
+Summary:	Database independent layer - development part
+Summary(pl):	Niezalezne od bazy danych API dla ocamla - czê¶æ programistyczna
 Group:		Development/Libraries
 %requires_eq	ocaml
 
