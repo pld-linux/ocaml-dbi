@@ -53,17 +53,25 @@ Ten pakiet zawiera pliki potrzebne do tworzenia programów w OCamlu z
 u¿yciem tej biblioteki.
 
 %package postgres-driver
-Summary:	Database independent layer - bytecode objects
+Summary:	Database independent layer - PostgreSQL driver
+Summary(pl):	Warstwa niezale¿na od bazy danych - sterownik do PostgreSQL-a
 Group:		Development/Libraries
 Requires:       ocaml-dbi-devel >= 0.9.10-2
 %requires_eq	ocaml
 
 %description postgres-driver
 ocamldbi is a database independent layer for Objective CAML (OCaml)
-patterned upon Perl DBI. This subpackage containes driver for postgres.
+patterned upon Perl DBI. This subpackage containes driver for
+PostgreSQL.
+
+%description postgres-driver -l pl
+ocamldbi to niezale¿na od bazy danych warstwa dla Objective CAML-a
+(OCamla) wzorowana na perlowym DBI. Ten pakiet zawiera sterownik dla
+PostgreSQL-a.
 
 %package mysql-driver
-Summary:	Database independent layer - bytecode objects
+Summary:	Database independent layer - MySQL driver
+Summary(pl):	Warstwa niezale¿na od bazy danych - sterownik do MySQL-a
 Group:		Development/Libraries
 Requires:       ocaml-dbi-devel >= 0.9.10-2
 %requires_eq	ocaml
@@ -71,6 +79,11 @@ Requires:       ocaml-dbi-devel >= 0.9.10-2
 %description mysql-driver
 ocamldbi is a database independent layer for Objective CAML (OCaml)
 patterned upon Perl DBI. This subpackage containes driver for MySQL.
+
+%description mysql-driver -l pl
+ocamldbi to niezale¿na od bazy danych warstwa dla Objective CAML-a
+(OCamla) wzorowana na perlowym DBI. Ten pakiet zawiera sterownik dla
+MySQL-a.
 
 %prep
 %setup -q -n %{_vendor_name}-%{version}
