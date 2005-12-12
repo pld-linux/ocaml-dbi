@@ -2,12 +2,12 @@
 Summary:	Database independent layer
 Summary(pl):	Niezale¿ne od bazy danych API dla ocamla
 Name:		ocaml-dbi
-Version:	0.9.10
-Release:	3
+Version:	0.9.11
+Release:	1
 License:	LGPL + OCaml linking exception
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/modcaml/%{_vendor_name}-%{version}.tar.gz
-# Source0-md5:	d23495a0a6dee8c0d636d29df844e981
+# Source0-md5:	b22a0aeb956c9049359579cd2cba33fd
 BuildRequires:	ocaml >= 3.04-7
 BuildRequires:	ocaml-postgres-devel
 BuildRequires:	ocaml-mysql-devel
