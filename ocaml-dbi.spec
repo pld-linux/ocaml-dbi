@@ -1,16 +1,18 @@
 %define		_vendor_name	ocamldbi
+%define		ocaml_ver	3.09.1
 Summary:	Database independent layer
 Summary(pl):	Niezale¿ne od bazy danych API dla ocamla
 Name:		ocaml-dbi
 Version:	0.9.11
-Release:	1
+Release:	2
 License:	LGPL + OCaml linking exception
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/modcaml/%{_vendor_name}-%{version}.tar.gz
 # Source0-md5:	b22a0aeb956c9049359579cd2cba33fd
-BuildRequires:	ocaml >= 3.04-7
-BuildRequires:	ocaml-postgres-devel
+BuildRequires:	ocaml >= %{ocaml_ver}
 BuildRequires:	ocaml-mysql-devel
+BuildRequires:	ocaml-pcre-devel
+BuildRequires:	ocaml-postgres-devel
 %requires_eq	ocaml-runtime
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -56,7 +58,7 @@ u¿yciem tej biblioteki.
 Summary:	Database independent layer - PostgreSQL driver
 Summary(pl):	Warstwa niezale¿na od bazy danych - sterownik do PostgreSQL-a
 Group:		Development/Libraries
-Requires:       ocaml-dbi-devel >= 0.9.10-2
+Requires:	ocaml-dbi-devel >= 0.9.10-2
 %requires_eq	ocaml
 
 %description postgres-driver
@@ -73,7 +75,7 @@ PostgreSQL-a.
 Summary:	Database independent layer - MySQL driver
 Summary(pl):	Warstwa niezale¿na od bazy danych - sterownik do MySQL-a
 Group:		Development/Libraries
-Requires:       ocaml-dbi-devel >= 0.9.10-2
+Requires:	ocaml-dbi-devel >= 0.9.10-2
 %requires_eq	ocaml
 
 %description mysql-driver
@@ -89,8 +91,9 @@ MySQL-a.
 %setup -q -n %{_vendor_name}-%{version}
 
 %build
-%{__make} all opt \
-	CC="%{__cc} %{rpmcflags} -fPIC" 
+%{__make} -j1 \
+	all opt \
+	CC="%{__cc} %{rpmcflags} -fPIC"
 
 %install
 rm -rf $RPM_BUILD_ROOT
