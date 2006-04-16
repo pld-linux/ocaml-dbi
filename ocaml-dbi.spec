@@ -1,10 +1,10 @@
 %define		_vendor_name	ocamldbi
-%define		ocaml_ver	3.09.1
+%define		ocaml_ver	1:3.09.1
 Summary:	Database independent layer
 Summary(pl):	Niezale¿ne od bazy danych API dla ocamla
 Name:		ocaml-dbi
 Version:	0.9.11
-Release:	2
+Release:	3
 License:	LGPL + OCaml linking exception
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/modcaml/%{_vendor_name}-%{version}.tar.gz
