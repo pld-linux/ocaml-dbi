@@ -1,7 +1,7 @@
 %define		_vendor_name	ocamldbi
 %define		ocaml_ver	1:3.09.2
 Summary:	Database independent layer
-Summary(pl.UTF-8):   Niezależne od bazy danych API dla ocamla
+Summary(pl.UTF-8):	Niezależne od bazy danych API dla ocamla
 Name:		ocaml-dbi
 Version:	0.9.11
 Release:	4
@@ -32,7 +32,7 @@ używać perlowych sterowników DBD, jeśli zainstalowany jest Perl4Caml.
 
 %package devel
 Summary:	Database independent layer - development part
-Summary(pl.UTF-8):   Niezależne od bazy danych API dla ocamla - część programistyczna
+Summary(pl.UTF-8):	Niezależne od bazy danych API dla ocamla - część programistyczna
 Group:		Development/Libraries
 %requires_eq	ocaml
 
@@ -56,7 +56,7 @@ użyciem tej biblioteki.
 
 %package postgres-driver
 Summary:	Database independent layer - PostgreSQL driver
-Summary(pl.UTF-8):   Warstwa niezależna od bazy danych - sterownik do PostgreSQL-a
+Summary(pl.UTF-8):	Warstwa niezależna od bazy danych - sterownik do PostgreSQL-a
 Group:		Development/Libraries
 Requires:	ocaml-dbi-devel >= 0.9.10-2
 %requires_eq	ocaml
@@ -73,7 +73,7 @@ PostgreSQL-a.
 
 %package mysql-driver
 Summary:	Database independent layer - MySQL driver
-Summary(pl.UTF-8):   Warstwa niezależna od bazy danych - sterownik do MySQL-a
+Summary(pl.UTF-8):	Warstwa niezależna od bazy danych - sterownik do MySQL-a
 Group:		Development/Libraries
 Requires:	ocaml-dbi-devel >= 0.9.10-2
 %requires_eq	ocaml
